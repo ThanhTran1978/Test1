@@ -16,6 +16,10 @@ import requests
 import time
 import base64
 
+# Kiểm tra xem biến 'page' đã tồn tại trong bộ nhớ chưa. 
+# Nếu chưa có (nghĩa là lần đầu mở app), thì đặt mặc định là "Dashboard"
+if 'page' not in st.session_state:
+    st.session_state.page = "Dashboard"
 # ==========================================
 # 1. CẤU HÌNH TRANG & GIAO DIỆN (CSS)
 # ==========================================
